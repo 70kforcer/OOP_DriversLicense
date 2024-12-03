@@ -1,12 +1,11 @@
 package com.login;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class APILoginInfo extends aivenLogin {
     private String username;
     private String password;
+    private String URL;
 
     public void setUsername(String _username) {
         this.username = _username;
@@ -22,12 +21,22 @@ public class APILoginInfo extends aivenLogin {
         return password;
     }
 
+    public void setURL(String _URL) {
+        this.URL = _URL;
+    }
+    public String getURL() {
+        return URL;
+    }
+
     @Override
     public boolean testAivenConnection() {
         try {
+            System.out.println("URL: " + this.getURL());
+            System.out.println("Username: " + this.getUsername());
+            System.out.println("Password: " + this.getPassword());
+
             Connection testConnection = DriverManager.getConnection(
-                    "jdbc:mysql://" +
-                            "oopgovsystem01-govsystem01.e.aivencloud.com:16924/login_schema",
+                    "jdbc:mysql://" + this.getURL() + "/login_schema",
                     this.getUsername(),
                     this.getPassword()
             );
