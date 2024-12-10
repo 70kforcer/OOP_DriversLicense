@@ -1,5 +1,10 @@
 plugins {
     id("java")
+    id("application")
+}
+
+application {
+    mainClass.set("com.frames.loginFrame")
 }
 
 group = "org.example"
@@ -16,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.intellij:forms_rt:7.0.3")
     implementation("mysql:mysql-connector-java:8.0.33")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -23,4 +29,12 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest.attributes["Main-Class"] = application.mainClass.get()
+    from(sourceSets["main"].output)
+    dependsOn(configurations["runtimeClasspath"])
+    from(configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map(::zipTree))
 }
