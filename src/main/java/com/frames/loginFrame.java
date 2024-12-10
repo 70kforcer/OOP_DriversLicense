@@ -10,11 +10,9 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.plaf.FontUIResource;
 import javax.swing.text.StyleContext;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 import com.login.APILoginInfo;
-import com.frames.registerFrame;
 
 public class loginFrame extends JFrame {
     private JPanel loginPanel;
@@ -39,7 +37,7 @@ public class loginFrame extends JFrame {
     private JLabel apiCheckLabel;
 
     private int flag = 0;
-    private APILoginInfo testConnection = new APILoginInfo();
+    private final APILoginInfo testConnection = new APILoginInfo();
 
     public loginFrame() {
 
@@ -80,30 +78,38 @@ public class loginFrame extends JFrame {
             }
         });
 
-        loginButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String username = usernameTF.getText();
-                String password = new String(passwordTF.getPassword());
-                APILoginInfo loginInfo = new APILoginInfo();
+        loginButton.addActionListener(e -> {
+            String username = usernameTF.getText();
+            String password = new String(passwordTF.getPassword());
+            APILoginInfo loginInfo = new APILoginInfo();
 
-                if (loginInfo.validate(username, password)) {
-                    JOptionPane.showMessageDialog(
-                            loginFrame.this, "Log In Successful!");
-                } else {
-                    JOptionPane.showMessageDialog(
-                            loginFrame.this,
-                            "Wrong username or password.",
-                            "Log In Failed", JOptionPane.ERROR_MESSAGE
-                    );
-                }
+            if (loginInfo.validate(username, password)) {
+                JOptionPane.showMessageDialog(
+                        loginFrame.this, "Log In Successful!");
+            } else {
+                JOptionPane.showMessageDialog(
+                        loginFrame.this,
+                        "Wrong username or password.",
+                        "Log In: Failed", JOptionPane.ERROR_MESSAGE
+                );
             }
         });
 
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                registerFrame registerFrame = new registerFrame();
+                loginFrame.this.setEnabled(false);
 
+                registerFrame.addWindowListener(new WindowAdapter() {
+                  @Override
+                  public void windowClosed(WindowEvent e) {
+                      super.windowClosed(e);
+                      loginFrame.this.setEnabled(true);
+                  }
+                });
+
+                registerFrame.setVisible(true);
             }
         });
 
@@ -115,7 +121,6 @@ public class loginFrame extends JFrame {
         setResizable(false);
 
         pack();
-
     }
 
     public static void main(String[] args) {
@@ -123,13 +128,8 @@ public class loginFrame extends JFrame {
     }
 
 
-
-
-
 // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ IDE GENERATED CODE ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 // XXXXXXXXXXXXXXXXXXXX  DO NOT INTERACT   XXXXXXXXXXXXXXXXXXXX
-
-
 
 
     {
@@ -191,13 +191,13 @@ public class loginFrame extends JFrame {
         loginPanelTitle.setText("Controller Login");
         titlePanel.add(loginPanelTitle, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         apiCheckPanel = new JPanel();
-        apiCheckPanel.setLayout(new GridLayoutManager(1, 1, new Insets(7, 0, 0, 0), -1, -1));
+        apiCheckPanel.setLayout(new GridLayoutManager(1, 1, new Insets(15, 0, 0, 0), -1, -1));
         loginPanel.add(apiCheckPanel, new GridConstraints(3, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         apiCheckLabel = new JLabel();
         Font apiCheckLabelFont = this.$$$getFont$$$(null, -1, 11, apiCheckLabel.getFont());
         if (apiCheckLabelFont != null) apiCheckLabel.setFont(apiCheckLabelFont);
         apiCheckLabel.setText("Check API");
-        apiCheckPanel.add(apiCheckLabel, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_NORTHEAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        apiCheckPanel.add(apiCheckLabel, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_SOUTHEAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     }
 
     /**

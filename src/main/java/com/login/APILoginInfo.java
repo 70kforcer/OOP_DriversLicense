@@ -5,7 +5,7 @@ import java.sql.*;
 public class APILoginInfo extends aivenLogin {
     private String username = System.getProperty("databaseUSERNAME");
     private String password = System.getProperty("databasePASSWORD");
-    private String URL = System.getProperty("databaseURL");
+    private String URL = "jdbc:mysql://" + System.getProperty("databaseURL");
 
     public void setUsername(String _username) {
         this.username = _username;
@@ -36,7 +36,7 @@ public class APILoginInfo extends aivenLogin {
             System.out.println("Password: " + this.getPassword());
 
             Connection testConnection = DriverManager.getConnection(
-                    "jdbc:mysql://" + this.getURL(),
+                    this.getURL(),
                     this.getUsername(),
                     this.getPassword()
             );
@@ -57,7 +57,7 @@ public class APILoginInfo extends aivenLogin {
     public boolean validate(String username1, String password1) {
         try {
             Connection loginConnection = DriverManager.getConnection(
-                    "jdbc:mysql://" + this.getURL() + "/login_schema",
+                    this.getURL() + "/login_schema",
                     this.getUsername(),
                     this.getPassword()
             );
@@ -74,4 +74,24 @@ public class APILoginInfo extends aivenLogin {
         }
         return false;
     }
+
+    @Override
+    public void newAccount(String newUsername, String newPassword) {
+        try {
+            Connection registerConnection = DriverManager.getConnection(
+                    this.getURL() + "/login_schema",
+                    this.getUsername(),
+                    this.getPassword()
+            );
+            PreparedStatement registerStatement = registerConnection.prepareStatement(
+                    "INSERT INTO login_schema.users1 (username, password) VALUES (?, ?)"
+            );
+            registerStatement.setString(1, newUsername);
+            registerStatement.setString(2, newPassword);
+            registerStatement.executeQuery();
+        } catch (SQLException se) {
+
+        }
+    }
+
 }
