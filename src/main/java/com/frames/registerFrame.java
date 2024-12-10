@@ -42,10 +42,17 @@ public class registerFrame extends JFrame {
 
             if (password.equals(checkPassword)) {
                 APILoginInfo register = new APILoginInfo();
-                register.newAccount(username, password);
+                if (register.newAccount(username, password)) {
+                    JOptionPane.showMessageDialog(null,
+                            "Successfully registered a new account.");
+                    newUsername.setText("");
+                }
             } else {
-                JOptionPane.showMessageDialog(null, "Passwords do not match. Try again.");
+                JOptionPane.showMessageDialog(null,
+                        "Passwords do not match. Try again.");
             }
+            newPassword.setText("");
+            checkNewPassword.setText("");
         });
     }
 

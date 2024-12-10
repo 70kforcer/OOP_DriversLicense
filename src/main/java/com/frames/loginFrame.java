@@ -41,6 +41,13 @@ public class loginFrame extends JFrame {
 
     public loginFrame() {
 
+        setContentPane(loginPanel);
+        setTitle("Log In");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+        setResizable(false);
+
         apiCheckLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         apiCheckLabel.addMouseListener(new MouseAdapter() {
             @Override
@@ -67,7 +74,7 @@ public class loginFrame extends JFrame {
                     int n = JOptionPane.showOptionDialog(
                             loginFrame.this,
                             "Check API again?",
-                            "A Silly Question",
+                            "Query",
                             JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
                     if (n == 0) {
                         flag = 0;
@@ -90,7 +97,7 @@ public class loginFrame extends JFrame {
                 JOptionPane.showMessageDialog(
                         loginFrame.this,
                         "Wrong username or password.",
-                        "Log In: Failed", JOptionPane.ERROR_MESSAGE
+                        "Log In: failed", JOptionPane.ERROR_MESSAGE
                 );
             }
         });
@@ -103,23 +110,14 @@ public class loginFrame extends JFrame {
 
                 registerFrame.addWindowListener(new WindowAdapter() {
                   @Override
-                  public void windowClosed(WindowEvent e) {
-                      super.windowClosed(e);
+                  public void windowClosing(WindowEvent e) {
+                      super.windowClosing(e);
                       loginFrame.this.setEnabled(true);
                   }
                 });
-
                 registerFrame.setVisible(true);
             }
         });
-
-        setContentPane(loginPanel);
-        setTitle("Log In");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setVisible(true);
-        setResizable(false);
-
         pack();
     }
 
