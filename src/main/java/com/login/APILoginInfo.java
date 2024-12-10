@@ -90,7 +90,8 @@ public class APILoginInfo extends aivenLogin {
             registerStatement.setString(2, newPassword);
             registerStatement.executeQuery();
         } catch (SQLException se) {
-
+            System.out.println("We got an error while creating a new account:");
+            se.printStackTrace();
         }
     }
 
