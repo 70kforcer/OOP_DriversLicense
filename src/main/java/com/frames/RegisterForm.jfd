@@ -1,0 +1,151 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "17.0.12" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets 0,hidemode 3"
+			"$columnConstraints": "[fill]"
+			"$rowConstraints": "[]"
+		} ) {
+			name: "this"
+			"$locationPolicy": 1
+			"$sizePolicy": 1
+			"resizable": false
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/logo.png" )
+			"title": "Sign Up | Register"
+			"defaultCloseOperation": 3
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$columnConstraints": "[362,fill]"
+				"$rowConstraints": "[][75][159]"
+				"$layoutConstraints": "hidemode 3"
+			} ) {
+				name: "registerFormInnerPanel"
+				"background": &Color0 new java.awt.Color( 222, 124, 125, 255 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$columnConstraints": "[413,fill]"
+					"$rowConstraints": "[][]"
+					"$layoutConstraints": "hidemode 3"
+				} ) {
+					name: "flavorUI"
+					"background": #Color0
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "header1"
+						"text": "Sign Up"
+						"font": new java.awt.Font( "Bahnschrift", 1, 24 )
+						"foreground": &Color1 new java.awt.Color( 116, 9, 56, 255 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0,alignx center,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "header2"
+						"text": "Create a New Controller Account"
+						"font": new java.awt.Font( "Bahnschrift", 1, 14 )
+						"foreground": #Color1
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1,alignx center,growx 0"
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "insets null 35 null 35,hidemode 3"
+					"$columnConstraints": "[301,fill]"
+					"$rowConstraints": "[][][][][][][][][][]"
+				} ) {
+					name: "textFieldPanel"
+					"background": #Color0
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "usernameLabel"
+						"text": "New Username"
+						"font": &Font0 new java.awt.Font( "Bahnschrift", 0, 14 )
+						"foreground": #Color1
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "usernameTF"
+						"background": &Color2 new java.awt.Color( 245, 192, 202, 255 )
+						"foreground": &Color3 new java.awt.Color( 116, 9, 56, 255 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "passwordLabel"
+						"text": "Password"
+						"font": #Font0
+						"foreground": #Color1
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "passwordTF"
+						"background": #Color2
+						"foreground": #Color3
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 4,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "confirmPasswordLabel"
+						"text": "Confirm Password"
+						"font": #Font0
+						"foreground": #Color1
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 5"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "confirmPasswordTF"
+						"background": #Color2
+						"foreground": #Color3
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 7,growx"
+					} )
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "notificationArea"
+						"background": new java.awt.Color( 222, 124, 125, 255 )
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"cursor": new java.awt.Cursor( 0 )
+						"focusable": false
+						"foreground": new java.awt.Color( 116, 9, 56, 255 )
+						"maximumSize": new java.awt.Dimension( 225, 35 )
+						"lineWrap": true
+						"columns": 1
+						"rows": 1
+						"wrapStyleWord": true
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 8,aligny top,grow 100 0"
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 1,alignx left,growx 0"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "insets null null 10 35 35 35,hidemode 2,alignx right"
+					"$columnConstraints": "[fill][fill][fill][fill]"
+					"$rowConstraints": "[][][]"
+				} ) {
+					name: "bottomPanel"
+					"background": #Color0
+					"name": "panel1"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "newAccountButton"
+						"text": "Register New Account"
+						"background": new java.awt.Color( 136, 12, 57, 255 )
+						"foreground": new java.awt.Color( 237, 215, 202, 255 )
+						"font": new java.awt.Font( "Bahnschrift", 0, 14 )
+						"cursor": new java.awt.Cursor( 12 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newAccountButtonClicked", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 2,aligny top,growy 0"
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 2,aligny bottom,growy 0"
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 240, 160 )
+			"size": new java.awt.Dimension( 260, 306 )
+		} )
+	}
+}
