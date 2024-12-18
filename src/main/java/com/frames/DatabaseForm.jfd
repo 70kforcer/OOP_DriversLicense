@@ -1,0 +1,513 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets 0"
+			"$columnConstraints": "[1362,fill]"
+			"$rowConstraints": "[727]"
+		} ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 1310, 720 )
+			"title": "Database Controller"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/logo.png" )
+			"resizable": false
+			add( new FormContainer( "javax.swing.JSplitPane", new FormLayoutManager( class javax.swing.JSplitPane ) ) {
+				name: "splitter"
+				"preferredSize": new java.awt.Dimension( 1280, 720 )
+				"dividerSize": 3
+				"dividerLocation": 300
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill]"
+					"$rowConstraints": "[][][][][395]"
+				} ) {
+					name: "leftpanel"
+					"border": &EtchedBorder0 new javax.swing.border.EtchedBorder( 1, null, null )
+					"maximumSize": new java.awt.Dimension( 300, 2147483647 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+						"$layoutConstraints": "insets 20 20 null 10,hidemode 3"
+						"$columnConstraints": "[49,fill][203,fill][257,fill]"
+						"$rowConstraints": "[]"
+					} ) {
+						name: "flavorUI"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "placeholder"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/logo.png" )
+							"border": sfield com.jgoodies.forms.factories.Borders DIALOG_BORDER
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 0 0,alignx center,growx 0"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "userlabel"
+							"text": "userLabel"
+							"font": new java.awt.Font( "Inter Semi Bold", 1, 13 )
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 1 0,alignx center,growx 0"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+							"$layoutConstraints": "hidemode 3,alignx right"
+							"$columnConstraints": "[fill]"
+							"$rowConstraints": "[]"
+						} ) {
+							name: "logout"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "logoutLabel"
+								"text": "Log Out"
+								"font": new java.awt.Font( "Inter Semi Bold", 1, 13 )
+								"cursor": new java.awt.Cursor( 12 )
+								"foreground": new java.awt.Color( 204, 255, 102, 255 )
+								"border": sfield com.jgoodies.forms.factories.Borders DLU2_BORDER
+								addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "logoutMouseClicked", true ) )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 0"
+							} )
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 2 0"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+						"$layoutConstraints": "hidemode 3"
+						"$columnConstraints": "[491,fill]"
+						"$rowConstraints": "[]"
+					} ) {
+						name: "leftseparator1"
+						add( new FormComponent( "javax.swing.JSeparator" ) {
+							name: "separator1"
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 0 0"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+						"$layoutConstraints": "hidemode 3"
+						"$columnConstraints": "[458,fill]"
+						"$rowConstraints": "[][][][][]0[]"
+					} ) {
+						name: "leftbuttons"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "view"
+							"text": "View Table"
+							"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 1, 3, false )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "viewButtonClicked", true ) )
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 0 1"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "updatebutton"
+							"text": "Update Table"
+							"font": #SwingDerivedFont0
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateButtonClicked", true ) )
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 0 2"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+						"$layoutConstraints": "hidemode 3"
+						"$columnConstraints": "[753,fill]"
+						"$rowConstraints": "[]"
+					} ) {
+						name: "leftseparator"
+						add( new FormComponent( "javax.swing.JSeparator" ) {
+							name: "separator2"
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 0 0"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 3"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+						"$layoutConstraints": "hidemode 3"
+						"$columnConstraints": "[506,fill]"
+						"$rowConstraints": "[352][]"
+					} ) {
+						name: "leftbottom"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+							"$columnConstraints": "[506,fill]"
+							"$rowConstraints": "[][]"
+							"$layoutConstraints": "hidemode 3"
+						} ) {
+							name: "innerleftbottom"
+							"border": new javax.swing.border.EtchedBorder( 1, null, null )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "remove"
+								"text": "Remove Entry"
+								"font": #SwingDerivedFont0
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "removeButtonClicked", true ) )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 0,aligny bottom,growy 0"
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "removeEntryTF"
+								"font": new com.jformdesigner.model.SwingDerivedFont( null, 2, 0, false )
+								"text": "Input License No. here"
+								addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "removeEntryTFMouseClicked", true ) )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 1"
+							} )
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 0 1"
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 4,growy"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "left"
+				} )
+				add( new FormContainer( "javax.swing.JLayeredPane", new FormLayoutManager( class javax.swing.JLayeredPane ) ) {
+					name: "rightlayeredpanel"
+					"border": #EtchedBorder0
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+						"$layoutConstraints": "insets 0,hidemode 3,aligny top"
+						"$columnConstraints": "[fill]"
+						"$rowConstraints": "[]"
+					} ) {
+						name: "bottomPane"
+						"border": #EtchedBorder0
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+							"$layoutConstraints": "hidemode 3,aligny top"
+							"$columnConstraints": "[382,center]0[0,fill]0[870,right]"
+							"$rowConstraints": "[290]"
+						} ) {
+							name: "innerBottomPane"
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+								"$layoutConstraints": "insets 0 10 0 0,hidemode 3,align right top"
+								"$columnConstraints": "[1596,fill]"
+								"$rowConstraints": "[][][]0[0]0[]0[0]0[]0[0]0[]0[]0[0]"
+							} ) {
+								name: "leftInfo"
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "bottomheader"
+									"text": "Personal Information"
+									"font": &SwingDerivedFont1 new com.jformdesigner.model.SwingDerivedFont( null, 1, 9, false )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 0,growx"
+								} )
+								add( new FormComponent( "javax.swing.JSeparator" ) {
+									name: "separator4"
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 1"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "lnlabel"
+									"text": "Last Name"
+									"font": &SwingDerivedFont2 new com.jformdesigner.model.SwingDerivedFont( null, 0, 4, false )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 2,growx"
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "lastname"
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 3,growx,width 250,height 30,gapx null 150"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "fnlabel"
+									"text": "First Name"
+									"font": #SwingDerivedFont2
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 4,growx"
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "firstname"
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 5,growx,width 250,height 30,gapx null 150"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "mnlabel"
+									"text": "Middle Name"
+									"font": #SwingDerivedFont2
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 6,growx"
+								} )
+								add( new FormComponent( "javax.swing.JTextField" ) {
+									name: "middlename"
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 7,growx,width 250,height 30,gapx null 150"
+								} )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "sxlabel"
+									"text": "Sex"
+									"font": #SwingDerivedFont2
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 8,alignx left,growx 0,gapx null 20"
+								} )
+								add( new FormComponent( "javax.swing.JRadioButton" ) {
+									name: "radioMale"
+									"text": "Male"
+									"border": sfield com.jgoodies.forms.factories.Borders DIALOG_BORDER
+									"$buttonGroup": new FormReference( "buttonGroup1" )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 8,alignx left,growx 0"
+								} )
+								add( new FormComponent( "javax.swing.JRadioButton" ) {
+									name: "radioFemale"
+									"text": "Female"
+									"border": sfield com.jgoodies.forms.factories.Borders DIALOG_BORDER
+									"$buttonGroup": new FormReference( "buttonGroup1" )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 8,alignx left,growx 0,gapx null 200"
+								} )
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+									"$layoutConstraints": "insets 0,hidemode 3"
+									"$columnConstraints": "[fill][fill]"
+									"$rowConstraints": "[]"
+								} ) {
+									name: "bdpanel"
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "bdlabel"
+										"text": "Birth Date"
+										"font": #SwingDerivedFont2
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 0 0,alignx left,growx 0,gapx 0"
+									} )
+									add( new FormComponent( "javax.swing.JFormattedTextField" ) {
+										name: "birthdate"
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 1 0,alignx left,growx 0,width 174"
+									} )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 9,alignx left,growx 0"
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 0,aligny top,growy 0"
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+								"$columnConstraints": "[469,fill]"
+								"$rowConstraints": "[290]0[]"
+								"$layoutConstraints": "insets 0,hidemode 2,align left top"
+							} ) {
+								name: "rightInfo"
+								add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+									"$columnConstraints": "[278,fill][781,fill]"
+									"$rowConstraints": "[][][]0[]0[][]0[][][]"
+									"$layoutConstraints": "insets 0 0 null null"
+								} ) {
+									name: "rightpanel"
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "whitespace"
+										"text": "   "
+										"font": #SwingDerivedFont1
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 0 0,growx"
+									} )
+									add( new FormComponent( "javax.swing.JSeparator" ) {
+										name: "separator5"
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 0 1 2 1"
+									} )
+									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+										"$columnConstraints": "[261,fill]"
+										"$rowConstraints": "[]0[]0[]0[]"
+										"$layoutConstraints": ""
+									} ) {
+										name: "charpanel"
+										add( new FormComponent( "javax.swing.JLabel" ) {
+											name: "wtlabel"
+											"text": "Weight in kilograms"
+											"font": #SwingDerivedFont2
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 0"
+										} )
+										add( new FormComponent( "javax.swing.JTextField" ) {
+											name: "weight"
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 1,width 200,height 20"
+										} )
+										add( new FormComponent( "javax.swing.JLabel" ) {
+											name: "htlabel"
+											"text": "Height in centimeters"
+											"font": #SwingDerivedFont2
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 2"
+										} )
+										add( new FormComponent( "javax.swing.JTextField" ) {
+											name: "height"
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 3,width 200,height 20"
+										} )
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 0 2,aligny top,growy 0"
+									} )
+									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+										"$layoutConstraints": "hidemode 3"
+										"$columnConstraints": "[fill][fill]"
+										"$rowConstraints": "[][][]"
+									} ) {
+										name: "rstpanel"
+										add( new FormComponent( "javax.swing.JLabel" ) {
+											name: "rstlabel"
+											"text": "Restrictions"
+											"font": #SwingDerivedFont2
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 0,growx"
+										} )
+										add( new FormComponent( "javax.swing.JCheckBox" ) {
+											name: "checkA"
+											"text": "A (motorcycles/tricycles)"
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 1,gapy 5 10"
+										} )
+										add( new FormComponent( "javax.swing.JCheckBox" ) {
+											name: "checkB"
+											"text": "B (cars/light trucks)"
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 2"
+										} )
+										add( new FormComponent( "javax.swing.JCheckBox" ) {
+											name: "checkC"
+											"text": "C (large trucks)"
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 1 1,gapy 5 10"
+										} )
+										add( new FormComponent( "javax.swing.JCheckBox" ) {
+											name: "checkD"
+											"text": "D (buses)"
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 1 2"
+										} )
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 1 2,grow"
+									} )
+									add( new FormComponent( "javax.swing.JLabel" ) {
+										name: "addresslabel"
+										"text": "Address"
+										"font": #SwingDerivedFont2
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 0 4,growx,gapx 7"
+									} )
+									add( new FormComponent( "javax.swing.JTextField" ) {
+										name: "address"
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 0 5 2 1,growx,width 250,height 30,gapx 7 7"
+									} )
+									add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+										"$columnConstraints": "[781,fill]"
+										"$rowConstraints": "[]"
+										"$layoutConstraints": "insets 0 0 null null,align right bottom"
+									} ) {
+										name: "rightbuttons"
+										add( new FormComponent( "javax.swing.JButton" ) {
+											name: "clearBT"
+											"text": "Clear"
+											"font": #SwingDerivedFont0
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 0"
+										} )
+										add( new FormComponent( "javax.swing.JButton" ) {
+											name: "addBT"
+											"text": "Add New Entry"
+											"font": #SwingDerivedFont0
+											addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addEntryButtonClicked", true ) )
+										}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+											"value": "cell 0 0"
+										} )
+									}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+										"value": "cell 1 7,align right bottom,grow 0 0"
+									} )
+								}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+									"value": "cell 0 0,aligny top,grow 100 0"
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 2 0"
+							} )
+						}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+							"value": "cell 0 0,aligny top,growy 0"
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"x": 0
+						"y": 375
+						"width": 995
+						"height": 310
+					} )
+					add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+						name: "mainpanel"
+						"border": #EtchedBorder0
+						addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "licenseetableStateChanged", true ) )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+							"$layoutConstraints": "hidemode 3"
+							"$columnConstraints": "[fill]"
+							"$rowConstraints": "[]"
+						} ) {
+							name: "dashtab"
+						}, new FormLayoutConstraints( null ) {
+							"title": "Dashboard"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+							"$layoutConstraints": "hidemode 3"
+							"$columnConstraints": "[1229,fill]"
+							"$rowConstraints": "[]"
+						} ) {
+							name: "currentlicensees"
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "tableScrollPane"
+								add( new FormComponent( "javax.swing.JTable" ) {
+									name: "datatable"
+									"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+										add( new java.util.Vector {
+											add( null )
+										} )
+									}, new java.util.Vector {
+										add( null )
+									}, new java.util.Vector {
+										add( null )
+									}, new java.util.Vector {
+										add( null )
+									}, new java.util.Vector {
+										add( null )
+									} )
+								} )
+							}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+								"value": "cell 0 0"
+							} )
+						}, new FormLayoutConstraints( null ) {
+							"title": "Current Licensees"
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"x": 0
+						"y": 0
+						"width": 995
+						"height": 375
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "right"
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1040, 580 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets 0,hidemode 3,align center top"
+			"$columnConstraints": "[328,fill]"
+			"$rowConstraints": "[361]"
+		} ) {
+			name: "datepicker"
+			"modalityType": enum java.awt.Dialog$ModalityType APPLICATION_MODAL
+			"type": enum java.awt.Window$Type POPUP
+			"$sizePolicy": 1
+			"$locationPolicy": 1
+			add( new FormComponent( "raven.datetime.component.date.DatePicker" ) {
+				name: "picker"
+				"closeAfterSelected": true
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0,grow"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 95, 586 )
+			"size": new java.awt.Dimension( 265, 325 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 596 )
+		} )
+	}
+}

@@ -1,0 +1,103 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "17.0.12" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "insets 0,hidemode 2"
+			"$columnConstraints": "[680,fill]"
+			"$rowConstraints": "[498]"
+		} ) {
+			name: "this"
+			"$sizePolicy": 1
+			"background": new java.awt.Color( 222, 124, 125, 255 )
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/logo.png" )
+			"title": "Department of Transportation | Landing"
+			"resizable": false
+			"defaultCloseOperation": 3
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "filly,insets 0 5 0 5,hidemode 2,aligny top"
+				"$columnConstraints": "[534,fill]"
+				"$rowConstraints": "[151][232]"
+			} ) {
+				name: "landingFrameInnerPanel"
+				"background": &Color0 new java.awt.Color( 222, 124, 125, 255 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$columnConstraints": "[555,fill]"
+					"$rowConstraints": "[][][]"
+					"$layoutConstraints": "hidemode 2"
+				} ) {
+					name: "flavorUI"
+					"background": #Color0
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "logo"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/logo2.png" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0,align center top,grow 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "header"
+						"text": "Department of Transportation"
+						"font": new java.awt.Font( "Bahnschrift", 1, 18 )
+						"foreground": new java.awt.Color( 116, 9, 56, 255 )
+						"background": new java.awt.Color( 253, 230, 208, 255 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "pad 0,cell 0 1,alignx center,growx 0"
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0,align center bottom,grow 0 0"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$columnConstraints": "[420,fill]"
+					"$rowConstraints": "[45][][][]"
+					"$layoutConstraints": "insets null null 100 null,hidemode 3,align center center"
+				} ) {
+					name: "buttonPanel"
+					"background": #Color0
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Log In as a..."
+						"font": &Font0 new java.awt.Font( "Candara", 1, 14 )
+						"foreground": new java.awt.Color( 116, 9, 56, 255 )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0,alignx center,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "licensedUserButton"
+						"text": "LICENSED USER"
+						"font": #Font0
+						"background": &Color1 new java.awt.Color( 136, 12, 57, 255 )
+						"foreground": &Color2 new java.awt.Color( 237, 215, 202, 255 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "licensedUserButtonClicked", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1,align center center,grow 0 0,width 150:200,height 38"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "or"
+						"text": "or"
+						"font": #Font0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2,alignx center,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "systemAdminButton"
+						"text": "SYSTEM ADMIN"
+						"font": #Font0
+						"background": #Color1
+						"foreground": #Color2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "systemAdminButtonClicked", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 3,align center center,grow 0 0,width 150:200,height 38"
+					} )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 1,align center bottom,grow 0 0"
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 0,growy"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 215, 155 )
+			"size": new java.awt.Dimension( 325, 390 )
+		} )
+	}
+}
